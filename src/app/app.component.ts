@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {LoggerService} from "./services/logger.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DIProvers';
+
+  constructor(private logger: LoggerService) {
+    logger.info('Logger service called in constructor')
+  }
 }
